@@ -23,6 +23,7 @@ class RouteServiceProvider extends ApiServiceProvider
     /**
      * @param Router $router
      */
+    public function mapCategoryRoutes(Router $router): void
     {
         $router
             ->prefix('api')
