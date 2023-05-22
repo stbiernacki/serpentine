@@ -170,6 +170,7 @@ return [
          * Application Service Providers...
          */
         App\Application\Providers\AppServiceProvider::class,
+        App\Application\Providers\EventServiceProvider::class,
         // App\Application\Providers\BroadcastServiceProvider::class,
 
         /*
@@ -178,6 +179,7 @@ return [
         App\Domain\Setting\Providers\DomainServiceProvider::class,
         App\Domain\StarWars\Providers\DomainServiceProvider::class,
         App\Domain\User\Providers\DomainServiceProvider::class,
+        App\Domain\Category\Providers\DomainServiceProvider::class,
 
     ],
 

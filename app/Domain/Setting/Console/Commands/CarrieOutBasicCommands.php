@@ -55,9 +55,10 @@ class CarrieOutBasicCommands extends Command
         $this->info('=-=-=-=-=-=-=-=-=-=-> check database.sqlite file');
         if (! file_exists('database/database.sqlite')) {
             echo `touch database/database.sqlite`;
-            $this->call('migrate');
-            $this->call('db:seed');
         }
+
+        $this->call('migrate:fresh');
+        $this->call('db:seed');
 
         $this->info('=-=-=-=-=-=-=-=-=-=-> create people');
         Schema::disableForeignKeyConstraints();
